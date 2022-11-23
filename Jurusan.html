@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan</title>
+    <link rel="shortcut icon" href="logo nesta.png">
+</head>
+<style>
+    *,
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 200;
+    }
+
+    .container {
+        width: 100%;
+        height: 80px;
+        background-color: #222;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo {
+        font-size: 30px;
+        color: white;
+        font-weight: 200;
+        padding: 20px 10px;
+    }
+
+    .navbar>ul>li {
+        display: inline-block;
+        font-size: 20px;
+        margin: 30px 10px;
+        list-style: none;
+        position: relative;
+        letter-spacing: 2px;
+    }
+
+    .navbar>ul>li>a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .navbar>ul>li>a:hover {
+        color: skyblue;
+
+    }
+
+    span {
+        color: skyblue;
+        font-size: 30px;
+    }
+
+    .btn {
+        border: 2px solid skyblue;
+        padding: 15px;
+        background-color: skyblue;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 200;
+        margin-left: 50px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        border: 2px solid skyblue;
+        background-color: transparent;
+        transition: .4s;
+        color: skyblue;
+    }
+
+    .isi {
+        text-align: center;
+        width: 100%;
+        height: 500vh;
+        background-color: rgb(67, 126, 207);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .isi>p {
+        justify-content: center;
+        text-align: left;
+        display: flex;
+        margin: 40px;
+        margin: 20px;
+        color: aliceblue;
+        line-height: 15px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-left: -600px;
+    }
+
+    .isi>h1 {
+        color: white;
+        letter-spacing: 3px;
+        font-size: 50px;
+    }
+
+    .isi>h3 {
+        color: white;
+        font-weight: 500px;
+        font-size: 20px;
+    }
+
+    .isi>h4 {
+        color: white;
+        margin-top: 15px;
+    }
+
+    .Logo-utama {
+        cursor: pointer;
+    }
+
+    .isi form input {
+        border: 2px solid skyblue;
+        padding: 10px;
+        width: 20%;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bawah {
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        width: 98.9vw;
+        height: auto;
+        background: #333;
+        color: white;
+        text-transform: capitalize;
+
+    }
+
+    .footer-content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .footer-content h1 {
+        font-weight: 800px;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    .ftr-down {
+        width: 100%;
+        background: #222;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    li.dropdown {
+        display: block;
+        text-align: left;
+        justify-content: none;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .dropdown:hover .content-dropdown {
+        display: block;
+    }
+
+    .content-dropdown a:hover {
+        color: white;
+    }
+
+    .content-dropdown {
+        position: absolute;
+        display: none;
+        box-shadow: #222;
+        z-index: 0;
+        background-color: #222;
+        border-top: 2px solid transparent;
+        width: 450px;
+        list-style: none;
+        text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 2px;
+        border: 2px solid transparent;
+
+    }
+
+    .content-dropdown a {
+        color: white;
+        transition: 0.3s
+    }
+
+    .content-dropdown a :hover {
+        color: skyblue;
+        transition: 0.4s
+    }
+
+    li a {
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content-dropdown a:hover {
+        background-color: none;
+        color: skyblue;
+
+    }
+
+    .Jurusan {
+        color: white;
+    }
+
+    .Jurusan>p {
+        text-align: left;
+        margin-left: 360px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .Jurusan>h3 {
+        font-size: 40px;
+    }
+
+    .foto-jurusan {
+        width: 220px;
+        height: 400px;
+        float: left;
+        margin-left: 20px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .Jurusan-2 {
+        color: white;
+    }
+
+    .Jurusan-2>p {
+        text-align: left;
+        margin-left: 360px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .Jurusan-2>h3 {
+        font-size: 40px;
+    }
+
+    .foto-jurusan-2 {
+        width: 250px;
+        height: 350px;
+        float: left;
+        margin-left: 20px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .Jurusan-3 {
+        color: white;
+    }
+
+    .Jurusan-3>p {
+        text-align: left;
+        margin-left: 360px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .content-dropdown a:hover {
+        background-color: none;
+        color: skyblue;
+    }
+
+    .Jurusan-3>h3 {
+        font-size: 40px;
+    }
+
+    .foto-jurusan-3 {
+        width: 250px;
+        height: 350px;
+        float: left;
+        margin-left: 20px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="Logo-utama">
+            <a href="index.html"><img
+                    style="width: 60px; height: 60px; float: left; margin-top: 8px; margin-left: 10px;"
+                    src="C:\vidio\project-sekolah\img\logo nesta.png">
+            </a>
+        </div>
+        <nav class="navbar">
+            <h1 class="logo">SMK NEGERI 1 <span>KOTA TANGERANG</span></h1>
+            <ul>
+                <li><a href="Profil.html">PROFIL</a></li>
+                <li class="dropdown"><a href="Jurusan.html">JURUSAN</a>
+                    <ul class="content-dropdown">
+                        <li><a href="">Desain Kominikasi Visual</a></li>
+                        <li><a href="">Teknik Jaringan Komputer dan Telekomunikasi</a></li>
+                        <li><a href="">Teknik Instalasi Tenaga Listrik</a></li>
+                        <li><a href="">Manajemen Perkantoran dan Layanan Bisnis</a></li>
+                        <li><a href="">Pemasaran</a></li>
+                        <li><a href="">Akuntansi dan Keuangan Lembaga</a></li>
+                    </ul>
+                </li>
+                <li><a href="organisasi.html">ORGANISASI</a></li>
+                <li><a href="#">GURU</a></li>
+                <li><a href="#">TENTANG</a></li>
+                <button href="#" class="btn">LOGIN</button>
+            </ul>
+        </nav>
+    </div>
+    <div class="isi">
+        <div class="Jurusan">
+            <h3>JURUSAN</h3>
+            <img class="foto-jurusan" src="C:\vidio\project-sekolah\img\Jurusan MM.jpg">
+            <h3
+                style="text-align: left;margin-left: 320px;margin-top: 20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                1.DKV</h3>
+            <p>
+                Desain Komunikasi Visual (DKV) adalah cabang ilmu desain yang mempelajari konsep komunikasi dan ungkapan
+                kreatif, teknik dan media dengan memanfaatkan elemen-elemen visual ataupun rupa untuk menyampaikan pesan
+                untuk tujuan tertentu (tujuan informasi ataupun tujuan persuasi yaitu mempengaruhi perilaku). Yang
+                menarik dari sini adalah seorang sarjana DKV harus bisa mengolah pesan tersebut secara efektif,
+                informatif dan komunikatif.</p>
+            <p>
+                Banyak hal-hal mendasar yang dipelajari di program studi DKV. Mengembangkan bentuk bahasa visual
+                (bermain gambar), mengolah pesan (bermain kata) keduanya untuk tujuan sosial maupun komersial, dari
+                individu atau kelompok yang ditujukan kepada kelompok lainnya. Visual berwujud kreatif dan inovatif,
+                sementara inti pesan harus komunikatif, efisien dan efektif saling mendukung agar tersampaikan dengan
+                baik pada sasaran.</p>
+        </div>
+        <div class="Jurusan-2">
+            <img class="foto-jurusan-2" src="C:\vidio\project-sekolah\img\Jurusan TKJ.jpg">
+            <h3
+                style="text-align: left;margin-left: 320px;margin-top: 160px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                2.TJKT</h3>
+            <p>
+                Teknik Jaringan Komputer dan Telekomunikasi (TJKT) merupakan program keahlian yang membekali peserta
+                didik dengan keterampilan, pengetahuan, dan sikap agar kompeten dalam merakit, menginstall program,
+                merawat dan memperbaiki komputer serta jaringannya. Lulusan program keahlian ini memiliki kemampuan
+                melakukan installasi jaringan komputer, baik itu jaringan komputer dalam rumah /kantor, antar kantor,
+                antar kota, antar provinsi, bahkan antar negara.
+
+            </p>
+        </div>
+        <div class="Jurusan-3">
+            <img class="foto-jurusan-3" src="C:\vidio\project-sekolah\img\Jurusan TITL.jpg">
+            <h3
+                style="text-align: left;margin-left: 320px;margin-top: 230px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                3.TITL</h3>
+            <p>
+                Teknik Instalasi Tenaga Listrik berkomitmen untuk mewujudkan lulusan yang terampil dan profesional dalam
+                bidang ketenagalistrikan, berakhlaq mulia, dan mampu bersaing dalam dunia kerja. Peserta didik dibekali
+                dengan kompetensi bidang ketenagalistrikan, diantaranya Instalasi Penerangan Listrik, Instalasi tenaga
+                Listrik, Pemrograman Programmable Logic Controller (PLC) sebagai kendali proses produksi, Repair dan
+                Maintenance peralatan listrik, seperti motor listrik, AC, Kulkas dan alat-alat rumah tangga lainnya.</p>
+        </div>
+        <div class="Jurusan-3">
+            <img class="foto-jurusan-3" src="C:\vidio\project-sekolah\img\Jurusan OTKP.jpg">
+            <h3
+                style="text-align: left;margin-left: 320px;margin-top: 230px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                4.MPLB</h3>
+            <p>
+                Manajemen Perkantoran dan Layanan Bisnis (MPLB)/Otomatisasi dan Tata Kelola Perkantoran (OTKP) merupakan
+                program/kompetensi keahlian yang membekali peserta didik dengan keterampilan, pengetahuan dan sikap
+                untuk menjadi tenaga kerja tingkat menengah yang memiliki kecakapan dan kompeten dalam bidang
+                pengelolaan administrasi perkantoran. Lulusan program/kompetensi keahlian ini memiliki kemampuan sebagai
+                Junior Administrative Assistant (Sekretaris Junior), Office Aministrative Staff (Staf Adminstrasi
+                Kantor), Admin Online, Digital Marketer, dan berwirausaha dalam bidang komputer perkantoran, penyedia
+                jasa pemasaran/periklanan (digital marketing), dan event organizer.</p>
+        </div>
+        <div class="Jurusan-3">
+            <img class="foto-jurusan-3" src="C:\vidio\project-sekolah\img\Jurusan BDP.jpg">
+            <h3
+                style="text-align: left;margin-left: 320px;margin-top: 230px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                5.PM</h3>
+            <p>
+                Pemasaran adalah jurusan yang fokus pada perencanaan, pengelolaan, pelaksanaan, dan pengawasan hingga ke
+                tahap evaluasi terhadap semua proses pemasaran barang maupun jasa oleh perusahaan.</p>
+        </div>
+        <div class="Jurusan-3">
+            <img class="foto-jurusan-3" src="C:\vidio\project-sekolah\img\Jurusan AKL.jpg">
+            <h3
+                style="text-align: left;margin-left: 320px;margin-top: 270px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                6.AKL</h3>
+            <p>
+                Akuntansi adalah segala proses yang berhubungan dengan transaksi keuangan. Transaksi keuangan tersebut
+                antara lain adalah mencatat, mengelompokan, mengolah, menyajikan data yang berhubungan dengan keuangan.
+                Dari informasi yang ada tersebut akan dihasilkan laporan keuangan yang akurat dan bisa menjadi bahan
+                untuk mengambil suatu keputusan. SMK jurusan Akuntansi dan Keuangan Lembaga (AKL) akan membekali siswa
+                dengan kompetensi dalam mengelola seluruh transaksi keuangan.</p>
+        </div>
+        <h3 style="margin-top: 250px;"><a href="organisasi.html"
+                style="margin-top: 100px;font-family: 'Times New Roman', Times, serif;">Organisasi di SMKN 1 Kota
+                Tangerang</a></h3>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h1>Terima Kasih</h1>
+            <p style="font-family: Arial;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique
+                voluptatem itaque, culpa non adipisci
+                ratione ullam quia fugiat eligendi hic repudiandae quas perferendis enim necessitatibus nemo ad tempora
+                laudantium consectetur?
+            </p>
+            <div class="ftr-down">
+                <p style="font-family: Arial, Helvetica, sans-serif;">Designed by &copy;school children</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan</title>
+    <link rel="shortcut icon" href="logo nesta.png">
+</head>
+<style>
+    *,
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 200;
+    }
+
+    .container {
+        width: 100%;
+        height: 80px;
+        background-color: #222;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo {
+        font-size: 30px;
+        color: white;
+        font-weight: 200;
+        padding: 20px 10px;
+    }
+
+    .navbar>ul>li {
+        display: inline-block;
+        font-size: 20px;
+        margin: 30px 10px;
+        list-style: none;
+        position: relative;
+        letter-spacing: 2px;
+    }
+
+    .navbar>ul>li>a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .navbar>ul>li>a:hover {
+        color: skyblue;
+
+    }
+
+    span {
+        color: skyblue;
+        font-size: 30px;
+    }
+
+    .btn {
+        border: 2px solid skyblue;
+        padding: 15px;
+        background-color: skyblue;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 200;
+        margin-left: 50px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        border: 2px solid skyblue;
+        background-color: transparent;
+        transition: .4s;
+        color: skyblue;
+    }
+
+    .isi {
+        text-align: center;
+        width: 100%;
+        height: 700vh;
+        background-color: rgb(67, 126, 207);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .isi>p {
+        justify-content: center;
+        text-align: left;
+        display: flex;
+        margin: 40px;
+        margin: 20px;
+        color: aliceblue;
+        line-height: 15px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-left: -600px;
+    }
+
+    .isi>h1 {
+        color: white;
+        letter-spacing: 3px;
+        font-size: 50px;
+    }
+
+    .isi>h3 {
+        color: white;
+        font-weight: 500px;
+        font-size: 20px;
+    }
+
+    .isi>h4 {
+        color: white;
+        margin-top: 15px;
+    }
+
+    .Logo-utama {
+        cursor: pointer;
+    }
+
+    .isi form input {
+        border: 2px solid skyblue;
+        padding: 10px;
+        width: 20%;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bawah {
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        width: 98.9vw;
+        height: auto;
+        background: #333;
+        color: white;
+        text-transform: capitalize;
+
+    }
+
+    .footer-content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .footer-content h1 {
+        font-weight: 800px;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    .ftr-down {
+        width: 100%;
+        background: #222;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    li.dropdown {
+        display: block;
+        text-align: left;
+        justify-content: none;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .dropdown:hover .content-dropdown {
+        display: block;
+    }
+
+    .content-dropdown a:hover {
+        color: white;
+    }
+
+    .content-dropdown {
+        position: absolute;
+        display: none;
+        box-shadow: #222;
+        z-index: 0;
+        background-color: #222;
+        border-top: 2px solid transparent;
+        width: 450px;
+        list-style: none;
+        text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 2px;
+        border: 2px solid transparent;
+
+    }
+
+    .content-dropdown a {
+        color: white;
+        transition: 0.3s
+    }
+
+    .content-dropdown a :hover {
+        color: skyblue;
+        transition: 0.4s
+    }
+
+    li a {
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content-dropdown a:hover {
+        background-color: none;
+        color: skyblue;
+
+    }
+
+    .Jurusan {
+        color: white;
+    }
+
+    .Jurusan>h3 {
+        font-size: 40px;
+    }
+
+    .foto-jurusan {
+        width: 240px;
+        height: 430px;
+        float: left;
+        margin-left: 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .isi-eskul {
+        text-align: left;
+        width: 100%;
+        height: 200vh;
+        background-color: rgb(67, 126, 207);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .content-2 {
+        text-align: center;
+    }
+
+    .content-2 h1 {
+        color: white;
+        font-size: 50px;
+        text-transform: uppercase;
+        margin-left: 20px;
+    }
+
+    .content-2 h3 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+    .nama-organisasi {
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 300px;
+        margin-right: 300px;
+        text-align: left;
+        color: white;
+        line-height: 33px;
+    }
+
+    .foto-organisasi>img {
+        width: 270px;
+        height: 180px;
+    }
+
+    .foto-organisasi>li {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    
+    .guru{
+        border: 2px solid black;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        margin-left: 15%;
+        width: 75%;
+        background: linear-gradient(white, skyblue);
+        border-radius: 20px;
+    }
+    .guru th{
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .guru td{
+        border: 2px solid black;
+        padding: 3px ;
+    }
+   
+</style>
+
+<body>
+    <div class="container">
+        <div class="Logo-utama">
+            <a href="index.html"><img
+                    style="width: 60px; height: 60px; float: left; margin-top: 8px; margin-left: 10px;"
+                    src="C:\vidio\project-sekolah\img\logo nesta.png">
+            </a>
+        </div>
+        <nav class="navbar">
+            <h1 class="logo">SMK NEGERI 1 <span>KOTA TANGERANG</span></h1>
+            <ul>
+                <li><a href="Profil.html">PROFIL</a></li>
+                <li class="dropdown"><a href="Jurusan.html">JURUSAN</a>
+                    <ul class="content-dropdown">
+                        <li><a href="">Desain Kominikasi Visual</a></li>
+                        <li><a href="">Teknik Jaringan Komputer dan Telekomunikasi</a></li>
+                        <li><a href="">Teknik Instalasi Tenaga Listrik</a></li>
+                        <li><a href="">Manajemen Perkantoran dan Layanan Bisnis</a></li>
+                        <li><a href="">Pemasaran</a></li>
+                        <li><a href="">Akuntansi dan Keuangan Lembaga</a></li>
+                    </ul>
+                </li>
+                <li><a href="organisasi.html">ORGANISASI</a></li>
+                <li><a href="guru.html">GURU</a></li>
+                <li><a href="tentang.html">TENTANG</a></li>
+                <button href="#" class="btn">LOGIN</button>
+            </ul>
+        </nav>
+    </div>
+    <div class="isi">
+        <div class="content-2">
+            <p>
+            <h1
+                style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                NAMA GURU </h1>
+            <h3
+                style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                smk 1 kota tangerang</h3>
+            </p>
+        </div>
+       
+        <div>
+            <table class="guru">
+                <tr>
+                    <th>Nama Guru</th>
+                    <th>Mata Pelaaran</th>
+                </tr>
+                <tr>
+                    <td>Agus Heriawan</td>
+                    <td>Produk Kreatif Kewirausahaan</td>
+                </tr>
+                <tr>
+                    <td>Ade Sevianto Dwitama</td>
+                    <td>Desain Grafis Percetakan</td>
+                </tr>
+                <tr>
+                    <td>Aep Gumiwa</td>
+                    <td>Ekonomi Bisnis</td>
+                </tr>
+                <tr>
+                    <td>Anjar Titayansyah</td>
+                    <td>Produk Kreatif Kewirausahaan</td>
+                </tr>
+                <tr>
+                    <td>Apip Farjaman</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Ariani Devita Sari</td>
+                    <td>Bahasa Korea</td>
+                </tr>
+                <tr>
+                    <td>Arlia Noviana</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>Asri Marheni</td>
+                    <td>Seni Budaya</td>
+                </tr>
+                <tr>
+                    <td>Bambang Yudiono</td>
+                    <td>Akuntansi Keuangan</td>
+                </tr>
+                <tr>
+                    <td>Budi</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Cartika Wibowo</td>
+                    <td>Komputer Jaringan Dasar</td>
+                </tr>
+                <tr>
+                    <td>Dedi Agustian</td>
+                    <td>Produk Kreatif Kewirausahaan</td>
+                </tr>
+                <tr>
+                    <td>Dedi Jamaludin</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>Dwi Dona Kustiawati</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Dwi Haryanto</td>
+                    <td>Komputer Akuntansi</td>
+                </tr>
+                <tr>
+                    <td>Edeh Kurniati</td>
+                    <td>Penataan Produk</td>
+                </tr>
+                <tr>
+                    <td>Else Wijayanti</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>Enny Fintriani</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>Era Marjianti</td>
+                    <td>Etika Profesi</td>
+                </tr>
+                <tr>
+                    <td>Farita Nurmala</td>
+                    <td>Lembaga Keuangan Pemerintah</td>
+                </tr>
+                <tr>
+                    <td>Ferry Lumondo</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Fitri Roeri Zuliawati</td>
+                    <td>Bahasa INdonesia</td>
+                </tr>
+                <tr>
+                    <td>Fitrian Ekawati</td>
+                    <td>Produk Kreatif Kewirausahaan</td>
+                </tr>
+                <tr>
+                    <td>Ganjar Candra Sumindar</td>
+                    <td>Instalasi Tenaga Listrik</td>
+                </tr>
+                <tr>
+                    <td>Habibatulah Rifah Mayunda</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Hendrik Herdiansyah</td>
+                    <td>Sistem Komputer</td>
+                </tr>
+                <tr>
+                    <td>Herlina</td>
+                    <td>OTK Sarana Prasarana</td>
+                </tr>
+                <tr>
+                    <td>Heru Prasetiawan</td>
+                    <td>Administrasi Infrastruktur Jaringan</td>
+                </tr>
+                <tr>
+                    <td>Hery Faturochman</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Iis Herawati</td>
+                    <td>Otomatisasi Tata Kelola Keuangan</td>
+                </tr>
+                <tr>
+                    <td>Ika Rosika</td>
+                    <td>Akuntansi Keuangan</td>
+                </tr>
+                <tr>
+                    <td>Imas Maesyaroh</td>
+                    <td>Kimia</td>
+                </tr>
+                <tr>
+                    <td>Indrajati Lukito</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Ishaqo Iskandar</td>
+                    <td>Sistem Digital</td>
+                </tr>
+                <tr>
+                    <td>Inne Pratiwi</td>
+                    <td>Pekerjaan Dasar Elektromagnetik</td>
+                </tr>
+                <tr>
+                    <td>Iwang Suwangsih</td>
+                    <td>Akuntansi Keuangan</td>
+                </tr>
+                <tr>
+                    <td>Jaja</td>
+                    <td>Administrasi Transaksi</td>
+                </tr>
+                <tr>
+                    <td>Jhon Jedi Roland</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>Laili Damayanti</td>
+                    <td>Sejarah Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Lilis Huzanah</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Ma'mun</td>
+                    <td>PPKN</td>
+                </tr>
+                <tr>
+                    <td>Mahfudoh</td>
+                    <td>Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Marganda Simamora</td>
+                    <td>OTKP Kepegawaian</td>
+                </tr>
+                <tr>
+                    <td>Mawan Agus Nugroho</td>
+                    <td>Desain Media Interaktif</td>
+                </tr>
+                <tr>
+                    <td>Meslise Rahnila </td>
+                    <td>Penataan Produk</td>
+                </tr>
+                <tr>
+                    <td>Mimin Aminah</td>
+                    <td>Pendidikan Agama Islam</td>
+                </tr>
+                <tr>
+                    <td>Mira Cristina</td>
+                    <td>Teknik Pengolahan Audio Dan Vedio</td>
+                </tr>
+                <tr>
+                    <td>Muhammad Ikhsan Fadhilah</td>
+                    <td>Pemrograman Dasar</td>
+                </tr>
+                <tr>
+                    <td>Muiyah</td>
+                    <td>OTK Keuangan</td>
+                </tr>
+                <tr>
+                    <td>Neneg Kurniamala</td>
+                    <td>Dasar Desain Grafis</td>
+                </tr>
+                <tr>
+                    <td>Nerpi Mahulae</td>
+                    <td>Ilmu Pengetahuan Alam</td>
+                </tr>
+                <tr>
+                    <td>Onnoveri</td>
+                    <td>PJOK</td>
+                </tr>
+                <tr>
+                    <td>Rakhmat Gunawan</td>
+                    <td>Bisnis Online</td>
+                </tr>
+                <tr>
+                    <td>Rasman Siahaan</td>
+                    <td>Administrasi Umum</td>
+                </tr>
+                <tr>
+                    <td>Ricky Maxie Suawa</td>
+                    <td>Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>Rifka Hijah Aryani</td>
+                    <td>Animasi 2D&3D</td>
+                </tr>
+                <tr>
+                    <td>Rini Saraswati </td>
+                    <td>Teknologi Perkantoran</td>
+                </tr>
+                <tr>
+                    <td>Risnawaty Tenrijiji</td>
+                    <td>Akuntansi Keuangan</td>
+                </tr>
+                <tr>
+                    <td>Ritayanah Tenrijiji</td>
+                    <td>OTK Humas dan Keprotokolan</td>
+                </tr>
+                <tr>
+                    <td>Rohib</td>
+                    <td>Penglolaan Bisnis RItel</td>
+                </tr>
+            
+        
+        
+            </table>
+        </div>    
+    </div>
+
+
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h1>Terima Kasih</h1>
+            <p style="font-family: Arial;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique
+                voluptatem itaque, culpa non adipisci
+                ratione ullam quia fugiat eligendi hic repudiandae quas perferendis enim necessitatibus nemo ad tempora
+                laudantium consectetur?
+            </p>
+            <div class="ftr-down">
+                <p style="font-family: Arial, Helvetica, sans-serif;">Designed by &copy;school children</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

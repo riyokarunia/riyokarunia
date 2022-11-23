@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sekolah</title>
+    <link rel="shortcut icon" href="logo nesta.png">
+</head>
+<style>
+    *,
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 200;
+    }
+
+    .container {
+        width: 100%;
+        height: 80px;
+        background-color: #222;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo {
+        font-size: 30px;
+        color: white;
+        font-weight: 200;
+        padding: 20px 10px;
+    }
+
+    .navbar>ul>li {
+        display: inline-block;
+        font-size: 20px;
+        margin: 30px 10px;
+        list-style: none;
+        position: relative;
+        letter-spacing: 2px;
+    }
+
+    .navbar>ul>li>a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        position: relative;
+    }
+
+    .navbar>ul>li>a:hover {
+        color: skyblue;
+
+    }
+
+    span {
+        color: skyblue;
+        font-size: 30px;
+    }
+
+    .btn {
+        border: 2px solid skyblue;
+        padding: 15px;
+        background-color: skyblue;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 200;
+        margin-left: 50px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        border: 2px solid skyblue;
+        background-color: transparent;
+        transition: .4s;
+        color: skyblue;
+    }
+
+    
+
+    .Logo-utama {
+        cursor: pointer;
+    }
+
+    .isi form input {
+        border: 2px solid skyblue;
+        padding: 10px;
+        width: 20%;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bawah {
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        width: 98.9vw;
+        height: auto;
+        background: #333;
+        color: white;
+        text-transform: capitalize;
+
+    }
+
+    .footer-content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .footer-content h1 {
+        font-weight: 800px;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    .ftr-down {
+        width: 100%;
+        background: #222;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    li.dropdown {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+    }
+
+    .dropdown:hover .content-dropdown {
+        display: block;
+    }
+
+    .content-dropdown a:hover {
+        color: white;
+    }
+
+    .content-dropdown {
+        position: absolute;
+        display: none;
+        box-shadow: #222;
+        z-index: 0;
+        background-color: #222;
+        border-top: 2px solid transparent;
+        width: 450px;
+        list-style: none;
+        text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 2px;
+        border: 2px solid transparent;
+
+    }
+
+    .content-dropdown a {
+        color: white;
+    }
+
+    .content-dropdown a:hover {
+        color: skyblue;
+    }
+
+    li a {
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content-dropdown a:hover {
+        background-color: none;
+    }
+
+    .content-2 {
+        background-color: rgb(5, 55, 99);
+        display: inline block;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    .content-foto {
+        display: inline-block;
+    }
+
+    .content-2 h1 {
+        color: white;
+        font-size: 50px;
+        text-transform: uppercase;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    .content-2 h3 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 50px;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    .content-2 img {
+        float: none;
+        align-items: center;
+
+
+    }
+
+    .services {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 100px auto;
+    }
+
+    .title h2 {
+        color: aqua;
+        text-transform: uppercase;
+        font-size: 75px;
+        width: 1580px;
+        text-align: center;
+        background-color: rgba(7, 73, 255, 0.833);
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+        background-color: skyblue;
+    }
+
+    .card {
+        height: 365px;
+        width: 335px;
+        padding: 20px 35px;
+        background-color: #444;
+        border-radius: 20px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: black;
+    }
+
+    .card h5 {
+        font-size: 20px;
+        text-transform: capitalize;
+        color: aqua;
+    }
+
+    .card p {
+        text-transform: none;
+        font-weight: 100px;
+    }
+
+    .card img {
+        width: 90%;
+    }
+
+    .head-text {
+        height: 85vh;
+        font-size: 25px;
+        background: linear-gradient(skyblue,blue);
+        padding: 50px 20%;
+        align-items: center;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .head-text p{
+        font-size: 40px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .head-text>h1 {
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 60px;
+        font-size: 50px;
+        word-spacing: 8px;
+    }
+
+    .head-text>h1>span {
+      color: white;
+    }
+    .head-text img{
+        width: 20%;
+        height: 35%;
+        margin:40px;
+    }
+
+    
+</style>
+
+<body>
+    <div class="container">
+        <div class="Logo-utama">
+            <img style="width: 60px; height: 60px; float: left; margin-top: 8px; margin-left: 10px;"
+                src="C:\vidio\project-sekolah\img\logo nesta.png">
+
+        </div>
+        <nav class="navbar">
+            <h1 class="logo">SMK NEGERI 1 <span>KOTA TANGERANG</span></h1>
+            <ul>
+                <li><a href="Profil.html">PROFIL</a></li>
+                <li class="dropdown"><a href="Jurusan.html">JURUSAN</a>
+                    <ul class="content-dropdown">
+                        <li><a href="">Desain Kominikasi Visual</a></li>
+                        <li><a href="">Teknik Jaringan Komputer dan Telekomunikasi</a></li>
+                        <li><a href="">Teknik Instalasi Tenaga Listrik</a></li>
+                        <li><a href="">Manajemen Perkantoran dan Layanan Bisnis</a></li>
+                        <li><a href="">Pemasaran</a></li>
+                        <li><a href="">Akuntansi dan Keuangan Lembaga</a></li>
+                    </ul>
+                </li>
+                <li><a href="organisasi.html">ORGANISASI</a></li>
+                <li><a href="guru.html">GURU</a></li>
+                <li><a href="tentang.html">TENTANG</a></li>
+                <button href="#" class="btn">LOGIN</button>
+            </ul>
+        </nav>
+    </div>
+    <div class="head-text">
+        <img src="C:\vidio\project-sekolah\img\logo nesta.png" alt="" >
+        <h1>selamat datang <span><br>smkn 1 kota tangerang</span></h1>
+    </div>
+    <div class="content-foto">
+        <div class="content-2">
+            <p>
+            <h1
+                style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                organisasi</h1>
+            <h3
+                style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                SMKN 1 kota tangerang</h3>
+            <a href="organisasi.html"><img src="C:\vidio\project-sekolah\img\photo eskul.jpg" alt="" width="50%"
+                    height="50%"></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="title">
+            <h2>our services</h2>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <img src="C:\vidio\project-sekolah\img\ramean.jpg" alt="">
+                <h5>sekolah</h5>
+                <div class="pra">
+                    <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt iste, obcaecati quam
+                        unde assumenda quis deleniti suscipit alias aut deserunt eveniet, id placeat aliquid consequatur
+                        esse soluta doloribus nobis?</p>
+
+                    <p style="text-align: center;">
+                        <a class="btton" href="Profil.html">readmore</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\vidio\project-sekolah\img\photo eskul.jpg">
+                <h5>eskul</h5>
+                <div class="pra">
+                    <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt iste, obcaecati quam
+                        unde assumenda quis deleniti suscipit alias aut deserunt eveniet, id placeat aliquid consequatur
+                        esse soluta doloribus nobis?</p>
+
+                    <p style="text-align: center;">
+                        <a class="btton" href="organisasi.html">readmore</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\vidio\project-sekolah\img\logo nesta.png" width="20%">
+                <h5>INSTAGRAM</h5>
+                <div class="pra">
+                    <p></p>
+
+                    <p style="text-align: center;">
+                        <a class="btton" href="https://www.instagram.com/mpkosisnesta/?hl=id">readmore</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h1>Terima Kasih</h1>
+            <p style="font-family: Arial;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique
+                voluptatem itaque, culpa non adipisci
+                ratione ullam quia fugiat eligendi hic repudiandae quas perferendis enim necessitatibus nemo ad tempora
+                laudantium consectetur?
+            </p>
+            <div class="ftr-down">
+                <p style="font-family: Arial;">Designed by &copy;school children</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

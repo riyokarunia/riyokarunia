@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan</title>
+    <link rel="shortcut icon" href="logo nesta.png">
+</head>
+<style>
+    *,
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 200;
+    }
+
+    .container {
+        width: 100%;
+        height: 80px;
+        background-color: #222;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo {
+        font-size: 30px;
+        color: white;
+        font-weight: 200;
+        padding: 20px 10px;
+    }
+
+    .navbar>ul>li {
+        display: inline-block;
+        font-size: 20px;
+        margin: 30px 10px;
+        list-style: none;
+        position: relative;
+        letter-spacing: 2px;
+    }
+
+    .navbar>ul>li>a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .navbar>ul>li>a:hover {
+        color: skyblue;
+
+    }
+
+    span {
+        color: skyblue;
+        font-size: 30px;
+    }
+
+    .btn {
+        border: 2px solid skyblue;
+        padding: 15px;
+        background-color: skyblue;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 200;
+        margin-left: 50px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        border: 2px solid skyblue;
+        background-color: transparent;
+        transition: .4s;
+        color: skyblue;
+    }
+
+    .isi {
+        text-align: center;
+        width: 100%;
+        height: 700vh;
+        background-color: rgb(67, 126, 207);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .isi>p {
+        justify-content: center;
+        text-align: left;
+        display: flex;
+        margin: 40px;
+        margin: 20px;
+        color: aliceblue;
+        line-height: 15px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-left: -600px;
+    }
+
+    .isi>h1 {
+        color: white;
+        letter-spacing: 3px;
+        font-size: 50px;
+    }
+
+    .isi>h3 {
+        color: white;
+        font-weight: 500px;
+        font-size: 20px;
+    }
+
+    .isi>h4 {
+        color: white;
+        margin-top: 15px;
+    }
+
+    .Logo-utama {
+        cursor: pointer;
+    }
+
+    .isi form input {
+        border: 2px solid skyblue;
+        padding: 10px;
+        width: 20%;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bawah {
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        width: 98.9vw;
+        height: auto;
+        background: #333;
+        color: white;
+        text-transform: capitalize;
+
+    }
+
+    .footer-content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .footer-content h1 {
+        font-weight: 800px;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    .ftr-down {
+        width: 100%;
+        background: #222;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    li.dropdown {
+        display: block;
+        text-align: left;
+        justify-content: none;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .dropdown:hover .content-dropdown {
+        display: block;
+    }
+
+    .content-dropdown a:hover {
+        color: white;
+    }
+
+    .content-dropdown {
+        position: absolute;
+        display: none;
+        box-shadow: #222;
+        z-index: 0;
+        background-color: #222;
+        border-top: 2px solid transparent;
+        width: 450px;
+        list-style: none;
+        text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 2px;
+        border: 2px solid transparent;
+
+    }
+
+    .content-dropdown a {
+        color: white;
+        transition: 0.3s
+    }
+
+    .content-dropdown a :hover {
+        color: skyblue;
+        transition: 0.4s
+    }
+
+    li a {
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content-dropdown a:hover {
+        background-color: none;
+        color: skyblue;
+
+    }
+
+    .Jurusan {
+        color: white;
+    }
+
+    .Jurusan>h3 {
+        font-size: 40px;
+    }
+
+    .foto-jurusan {
+        width: 240px;
+        height: 430px;
+        float: left;
+        margin-left: 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .isi-eskul {
+        text-align: left;
+        width: 100%;
+        height: 200vh;
+        background-color: rgb(67, 126, 207);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .content-2 {
+        text-align: center;
+    }
+
+    .content-2 h1 {
+        color: white;
+        font-size: 50px;
+        text-transform: uppercase;
+        margin-left: 20px;
+    }
+
+    .content-2 h3 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+    .nama-organisasi {
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 300px;
+        margin-right: 300px;
+        text-align: left;
+        color: white;
+        line-height: 33px;
+    }
+
+    .foto-organisasi>img{
+        width: 270px;
+        height: 180px;
+    }
+
+    .foto-organisasi>li{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="Logo-utama">
+            <a href="index.html"><img
+                    style="width: 60px; height: 60px; float: left; margin-top: 8px; margin-left: 10px;"
+                    src="C:\vidio\project-sekolah\img\logo nesta.png">
+            </a>
+        </div>
+        <nav class="navbar">
+            <h1 class="logo">SMK NEGERI 1 <span>KOTA TANGERANG</span></h1>
+            <ul>
+                <li><a href="Profil.html">PROFIL</a></li>
+                <li class="dropdown"><a href="Jurusan.html">JURUSAN</a>
+                    <ul class="content-dropdown">
+                        <li><a href="">Desain Kominikasi Visual</a></li>
+                        <li><a href="">Teknik Jaringan Komputer dan Telekomunikasi</a></li>
+                        <li><a href="">Teknik Instalasi Tenaga Listrik</a></li>
+                        <li><a href="">Manajemen Perkantoran dan Layanan Bisnis</a></li>
+                        <li><a href="">Pemasaran</a></li>
+                        <li><a href="">Akuntansi dan Keuangan Lembaga</a></li>
+                    </ul>
+                </li>
+                <li><a href="organisasi.html">ORGANISASI</a></li>
+                <li><a href="guru.html">GURU</a></li>
+                <li><a href="tentang.html">TENTANG</a></li>
+                <button href="#" class="btn">LOGIN</button>
+            </ul>
+        </nav>
+    </div>
+    <div class="isi">
+        <div class="content-2">
+            <p>
+            <h1
+                style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                organisasi</h1>
+            <h3
+                style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                smk 1 kota tangerang</h3>
+            <img src="C:\vidio\project-sekolah\img\photo eskul.jpg" alt="" width="45%"
+                height="45%">
+            </p>
+        </div>
+        <div class="nama-organisasi">
+            <ol class="foto-organisasi">
+                <li>RISMA (Remaja Masjis Al-Iqtishod</li>
+                <img src="C:\vidio\project-sekolah\img\Org-RISMA.jpg">
+                <li>PPK (Persekutuan Pelajar Kristen)</li>
+                <li>PBKM (Pelajar Buddha Kalyanamitta)</li>
+                <li>PRAMUKA (Praja Muda Karana)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-PRAMUKA.jpg">
+                <li>PASKIBRA (Pasukan Pengibar Bendera)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-PASKIBRA.jpg">
+                <li>WSN (Wushu Salsabila Nesta)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-WUSHU.jpg">
+                <li>BKC (Bandung Karate Club)</li>
+                <li>Taekwondo</li>
+                <img src="C:\vidio\project-sekolah\img\Org-TAEKONDOW.jpg">
+                <li>PSN (Pencak Silat Nesta)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-SILAT.jpg">
+                <li>NBL (Nesta Basketball)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-BASKET.jpg">
+                <li>Nesta Futsal</li>
+                <img src="C:\vidio\project-sekolah\img\Org-FUTSAL.jpg">
+                <li>NVC (Nesta Volleyball Club)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-VOLI.jpg">
+                <li>KWH (Kewirausahaan)</li>
+                <li>PMR (Palang Merah Remaja)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-PMR.jpg">
+                <li>MPK OSIS</li>
+                <li>Teater '15</li>
+                <img src="C:\vidio\project-sekolah\img\Org-TEATER.jpg">
+                <li>METIKASIS (Media Informatika Siswa)</li>
+                <img src="C:\vidio\project-sekolah\img\Org-METIKASIS.jpg">
+                <li>Seni Tari</li>
+                <li>UMN (Universal Music Nesta)</li>
+                <li>Klub Bahasa Korea</li>
+                <img src="C:\vidio\project-sekolah\img\Org-KOREA.jpg">
+                <li>Nihon Club</li>
+                <li>NEC (Nesta English Club)</li>
+                <li>IKPA (Ikatan Pencinta Alam)</li>
+            </ol>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h1>Terima Kasih</h1>
+            <p style="font-family: Arial;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique
+                voluptatem itaque, culpa non adipisci
+                ratione ullam quia fugiat eligendi hic repudiandae quas perferendis enim necessitatibus nemo ad tempora
+                laudantium consectetur?
+            </p>
+            <div class="ftr-down">
+                <p style="font-family: Arial, Helvetica, sans-serif;">Designed by &copy;school children</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

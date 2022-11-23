@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="shortcut icon" href="logo nesta.png">
+</head>
+<style>
+    *,
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 200;
+    }
+
+    .container {
+        width: 100%;
+        height: 80px;
+        background-color: #222;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo {
+        font-size: 30px;
+        color: white;
+        font-weight: 200;
+        padding: 20px 10px;
+    }
+
+    .navbar>ul>li {
+        display: inline-block;
+        font-size: 20px;
+        margin: 30px 10px;
+        list-style: none;
+        position: relative;
+        letter-spacing: 2px;
+    }
+
+    .navbar>ul>li>a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        position: relative;
+    }
+
+    .navbar>ul>li>a:hover {
+        color: skyblue;
+
+    }
+
+    span {
+        color: skyblue;
+        font-size: 30px;
+    }
+
+    .btn {
+        border: 2px solid skyblue;
+        padding: 15px;
+        background-color: skyblue;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 200;
+        margin-left: 50px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        border: 2px solid skyblue;
+        background-color: transparent;
+        transition: .4s;
+        color: skyblue;
+    }
+
+    .isi {
+        text-align: center;
+        width: 100%;
+        height: 550vh;
+        background-color: rgb(67, 126, 207);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .isi>p {
+        justify-content: center;
+        text-align: left;
+        display: flex;
+        margin: 40px;
+        margin: 20px;
+        color: aliceblue;
+        line-height: 15px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-left: -600px;
+    }
+
+    .isi>h1 {
+        color: white;
+        letter-spacing: 3px;
+        font-size: 50px;
+    }
+
+    .isi>h3 {
+        color: white;
+        font-weight: 500px;
+        font-size: 20px;
+    }
+
+    .isi>h4 {
+        color: white;
+        margin-top: 15px;
+    }
+
+    .Logo-utama {
+        cursor: pointer;
+    }
+
+    .isi form input {
+        border: 2px solid skyblue;
+        padding: 10px;
+        width: 20%;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bawah {
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        width: 98.9vw;
+        height: auto;
+        background: #333;
+        color: white;
+        text-transform: capitalize;
+
+    }
+
+    .footer-content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .footer-content h1 {
+        font-weight: 800px;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    .ftr-down {
+        width: 100%;
+        background: #222;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    li.dropdown {
+        display: block;
+        text-align: left;
+        justify-content: none;
+        align-items: center;
+        text-decoration: none;
+    }
+    .content-dropdown a:hover {
+        background-color: none;
+        color: skyblue;
+    }
+
+    .dropdown:hover .content-dropdown {
+        display: block;
+    }
+
+    .content-dropdown a:hover {
+        color: white;
+    }
+
+    .content-dropdown {
+        position: absolute;
+        display: none;
+        box-shadow: #222;
+        z-index: 0;
+        background-color: #222;
+        border-top: 2px solid transparent;
+        width: 450px;
+        list-style: none;
+        text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 2px;
+        border: 2px solid transparent;
+
+    }
+
+    .content-dropdown a {
+        color: white !important;
+    }
+
+    li a {
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content-dropdown a:hover {
+        background-color: none;
+    }
+
+    .foto {
+        margin-top: 20px;
+        width: 201.5vh;
+        height: 900px;
+        border-radius: 10px;
+        border: 5px solid white;
+    }
+
+    .profil-sekolah {
+        color: white;
+        background-color: rgb(17, 86, 182);
+        height: 134px;
+
+
+    }
+
+    .profil2 {
+        line-height: 30px;
+        text-align: left;
+
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .visi-misi {
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 300px;
+        margin-right: 300px;
+        text-align: left;
+
+    }
+    .Biodata{
+        background-color: white;
+        color:#222;
+        width: 200vh;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 6px;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="Logo-utama">
+            <a href="index.html"><img
+                    style="width: 60px; height: 60px; float: left; margin-top: 8px; margin-left: 10px;"
+                    src="C:\vidio\project-sekolah\img\logo nesta.png">
+            </a>
+        </div>
+        <nav class="navbar">
+            <h1 class="logo">SMK NEGERI 1 <span>KOTA TANGERANG</span></h1>
+            <ul>
+                <li><a href="Profil.html">PROFIL</a></li>
+                <li class="dropdown"><a href="Jurusan.html">JURUSAN</a>
+                    <ul class="content-dropdown">
+                        <li><a href="">Desain Kominikasi Visual</a></li>
+                        <li><a href="">Teknik Jaringan Komputer dan Telekomunikasi</a></li>
+                        <li><a href="">Teknik Instalasi Tenaga Listrik</a></li>
+                        <li><a href="">Manajemen Perkantoran dan Layanan Bisnis</a></li>
+                        <li><a href="">Pemasaran</a></li>
+                        <li><a href="">Akuntansi dan Keuangan Lembaga</a></li>
+                    </ul>
+                </li>
+                <li><a href="organisasi.html">ORGANISASI</a></li>
+                <li><a href="guru.html">GURU</a></li>
+                <li><a href="tentang.html">TENTANG</a></li>
+                <button href="#" class="btn">LOGIN</button>
+            </ul>
+        </nav>
+    </div>
+    <div class="isi">
+        <div class="profil-sekolah">
+            <h1 style="font-size: 55px;">PROFIL</h1>
+            <h3 style="font-size: 35px;">SMKN 1 KOTA TANGERANG</h3>
+            <img class="foto" src="C:\vidio\project-sekolah\img\SMKN.JPG">
+            <div class="profil2">
+                <table class="Biodata">
+                    <tbody>               
+                        <tr>               
+                            <td style="font-family: Arial, Helvetica, sans-serif;">Nama Sekolah</td>               
+                            <td>:</td>             
+                            <td  style="font-family: Arial, Helvetica, sans-serif;">SMK NEGERI 1 KOTA TANGERANG</td>
+                        </tr>               
+                         <tr>              
+                            <td style="font-family: Arial, Helvetica, sans-serif;">Alamat</td>               
+                            <td>:</td>              
+                            <td  style="font-family: Arial, Helvetica, sans-serif;">Jalan Perintis Kemerdekaan II, Cikokol, Kota Tangerang, Banten</td>               
+                        </tr>              
+                        <tr>                
+                            <td style="font-family: Arial, Helvetica, sans-serif;">Kode Pos</td>                
+                            <td>:</td>               
+                            <td  style="font-family: Arial, Helvetica, sans-serif;">15117</td>                
+                        </tr> 
+                        <tr>                
+                            <td style="font-family: Arial, Helvetica, sans-serif;">Telp</td>                
+                            <td>:</td>               
+                            <td style="font-family: Arial, Helvetica, sans-serif;">(021) 5522534</td>                
+                        </tr>
+                        <tr>                
+                            <td style="font-family: Arial, Helvetica, sans-serif;">Email Address</td>                
+                            <td>:</td>               
+                            <td style="font-family: Arial, Helvetica, sans-serif;">info@smk1-tng.sch.id</td>                
+                        </tr>
+                        <tr>                
+                            <td style="font-family: Arial, Helvetica, sans-serif;">Website</td>                
+                            <td>:</td>               
+                            <td style="font-family: Arial, Helvetica, sans-serif;"><a href="https://www.smkn1-tng.sch.id/">https://www.smk1-tng.sch.id</a></td>                
+                        </tr>               
+                    </tbody>                
+                </table>
+            </div>
+            <div class="visi-misi">
+                <h1 style="text-align: center;margin-top: 30px;">SEJARAH</h1>
+                <p style="margin-top: 25px; font-family:Arial, Helvetica, sans-serif;">
+                    Pada tahun 1966 dengan surat keputusan Bupati Kepala Daerah Tk.II Kabupaten Tangerang nomor :
+                    139/22/Kpts/1966 tanggal 20 Desember 1966.</p>
+                <p style="margin-top: 25px; font-family:Arial, Helvetica, sans-serif;">Panitia tersebut selanjutnya
+                    membentuk SMEA Persiapan Negeri Tangerang dengan nama SMEA Orde Baru.
+                    Pada bulan Januari 1967, mulai menerima siswa baru satu kelas sebanyak 40 orang dengan tempat
+                    belajar di gedung bekas perguruan BAPERKI</p>
+                <p style="margin-top: 25px; font-family:Arial, Helvetica, sans-serif;">Dengan surat keputusan Bupati
+                    Kepala Daerah Tk II Tangerang Nomor : 102/17/Kpts/Huk/1967, tanggal 1
+                    Oktober 1967 bangunan eks BAPERKI tersebut diserahkan secara resmi kepada SMEA Orde Baru (Persiapan
+                    Negeri) Tangerang</p>
+                <p style="margin-top: 25px; font-family:Arial, Helvetica, sans-serif;">Melalui SK Menteri P dan K
+                    Republik Indonesia Nomor : 22/UKK3/68, tanggal 31 Januari terhitung mulai
+                    tanggal 1 Januari 1968 mengoper SMEA Orde Baru menjadi SMEA Negeri Tangerang Pada tahun pelajaran
+                    1997/1998 SMEA Negeri Tangerang berubah istilah menjadi SMK Negeri 1 Tangerang.</p>
+                </p>
+                <h1 style="text-align: center;margin-top: 30px;">VISI</h1>
+                <p style="font-family: arial; margin-top: 25px;">SMK Negeri 1 Tangerang melalui visi sekolah berusaha
+                    menerjemahkan kebutuhan dunia saat ini dan
+                    kemajuan teknologi yang terus bergerak maju. serta untuk mewujudkan Tujuan Pendidikan Nasional, maka
+                    Visi dari SMK Negeri 1 Tangerang adalah:
+                    <br>
+                    "Mewujudkan insan cerdas yang Pancasilais, Kompeten, berjiwa wirausaha, berbudaya lingkungan dan
+                    berwawasan global"
+                </p>
+                <h1 style="text-align: center;margin-top: 30px;">MISI</h1>
+                <ol style="margin-top: 25px;">
+                    <li style="font-family: Arial;">Menanamkan karakter yang sesuai dengan nilai-nilai Pancasila
+                        (Beriman, bertaqwa kepada Tuhan YME,
+                        dan berakhlak mulia; mandiri; bernalar kritis; berkebinekaan global, bergotong royong, kreatif)
+                        melalui kegiatan Intrakurikuler maupun ekstrakurikuler.</li>
+                    <li style="font-family: Arial;">Mengembangkan rasa solidaritas dan toleransi murid melalui kegiatan
+                        intrakurikuler maupun
+                        ekstrakurikuler.</li>
+                    <li style="font-family: Arial;">Membudayakan literasi melalui intrakurikuler dan ekstrakurikuler.
+                    </li>
+                    <li style="font-family: Arial;">Mengembangkan potensi diri murid menjadi manusia yang tangguh dan
+                        sanggup menghadapi persaingan
+                        global melalui ujian sertifikasi.</li>
+                    <li style="font-family: Arial;">Meningkatkan kerja sama dengan Industri/perusahaan Internasional
+                    </li>
+                    <li style="font-family: Arial;">Mengembangkan dan menguatkan hubungan kemitraan dengan lembaga/
+                        pendidikan tinggi.</li>
+                    <li style="font-family: Arial;">Mengembangkan karakter Jiwa Wirausaha melalui intrakurikuler dan
+                        ekstrakurikuler.</li>
+                    <li style="font-family: Arial;">Menciptakan lingkungan bersih, hijau, sejuk, rindang, aman, nyaman
+                        dan berwawasan wiyata mandala.</li>
+                    <li style="font-family: Arial;">Mengembangkan life skill murid melalui kegiatan intrakurikuler
+                        maupun ekstrakurikuler.</li>
+                </ol>
+                <h1 style="text-align: center;margin-top: 30px;">TUJUAN</h1>
+                <ol style="margin-top: 25px;">
+                    <li style="font-family: Arial;">Menghasilkan lulusan yang kompeten dan berakhlak mulia.
+                    <li style="font-family: Arial;">Meningkatkan kualitas pembelajaran kreatif dan inovatif.</li>
+                    <li style="font-family: Arial;">Menyiapkan peserta didik agar mampu mengembangkan sikap profesional,
+                        mampu beradaptasi dan berkompetisi.</li>
+                    <li style="font-family: Arial;">Melengkapi sarana dan prasarana sesuai dengan perkembangan IPTEK.
+                    </li>
+                    <li style="font-family: Arial;">Membina kerja sama yang saling menguntungkan dengan DU/DI dan
+                        masyarakat.</li>
+                    <li style="font-family: Arial;">Meningkatkan kepuasan masyarakat untuk memperoleh layanan
+                        pendidikan.</li>
+                    <li style="font-family: Arial;">Konsistensi pelaksanaan aktifitas, kendali mutu dan jaminan mutu
+                        sekolah.</li>
+                    <li style="font-family: Arial;">Meningkatkan kesejahteraan warga sekolah.</li>
+                    <li style="font-family: Arial;">Terwujudnya kegiatan pembelajaran yang kondusif, lingkungan yang
+                        bersih, asri, dan nyaman.</li>
+                    <li style="font-family: Arial;">Menghasilkan lulusan yang berkarakter sesuai profil pelajar
+                        Pancasila.</li>
+                </ol>
+                <h3 style="margin-top: 50px;text-align: center;"><a href="Jurusan.html" style="margin-top: 40px;font-family: 'Times New Roman', Times, serif;">Jurusan di SMKN 1 Kota Tangerang</a></h3>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h1>Terima Kasih</h1>
+            <p style="font-family: Arial;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatem itaque, culpa non adipisci
+                ratione ullam quia fugiat eligendi hic repudiandae quas perferendis enim necessitatibus nemo ad tempora
+                laudantium consectetur?
+            </p>
+            <div class="ftr-down">
+                <p style="font-family: Arial, Helvetica, sans-serif;">Designed by &copy;school children</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
